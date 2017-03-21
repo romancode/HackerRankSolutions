@@ -10,13 +10,16 @@ public class insertionSortPart2 {
 		int n=ar.length;
 		
 		for(int i=1;i<n;i++){
-			for(int j=0;j<i;j++){
-				if(ar[j]>ar[i]){
-					int temp=ar[i];
-					ar[i]=ar[j];
-					ar[j]=temp;
-				}
+			
+			int j=i-1;
+			int temp=ar[i];
+			
+			while(j>=0 && ar[j]>temp){
+				ar[j+1]=ar[j];
+				j--;
 			}
+			ar[j+1]=temp;
+			
 			printArray(ar);
 		}
 	}  
