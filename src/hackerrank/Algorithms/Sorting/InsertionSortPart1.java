@@ -12,20 +12,24 @@ public class InsertionSortPart1 {
 		for(int arr_i=0; arr_i < n; arr_i++){
 			arr[arr_i] = in.nextInt();
 		}
+		insertIntoSorted(arr);
+		in.close();
+	}
 
+	public static void insertIntoSorted(int[] arr) {
 
-		int i= n-1;
+		int i= arr.length - 1;
 		int temp= arr[i];
-		
+
 		while(i>=1 && arr[i-1]>temp){
 			arr[i]=arr[i-1];
-			PrintArray(arr,n);
+			PrintArray(arr,arr.length);
 			i--;
 		}
-		
+
 		arr[i] = temp;
-		PrintArray(arr, n);
-		in.close();
+		PrintArray(arr, arr.length);
+
 	}
 	public static void PrintArray(int arr[],int n){
 
