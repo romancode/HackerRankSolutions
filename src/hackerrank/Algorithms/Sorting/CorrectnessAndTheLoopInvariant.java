@@ -33,5 +33,7 @@ public class CorrectnessAndTheLoopInvariant {
 			ar[i]=in.nextInt();
 		}
 		insertionSort(ar);
+		
+		in.close();
 	}
 }
