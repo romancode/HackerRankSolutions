@@ -3,6 +3,7 @@ package hackerrank.Java.Advanced;
 
 
 class Singleton{
+	
 	public String str;
 	private Singleton(){}
 	private static Singleton instance = null;
